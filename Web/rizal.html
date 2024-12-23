@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Good Morning!</title>
+  <meta name="description" content="Selamat datang di hari yang inda SayangKu!  ">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link href="(link unavailable)" rel="stylesheet">
+  <link href="(link unavailable)" rel="stylesheet">
+  <script src="(link unavailable)"></script>
+  <style>
+    body {
+      background-image: url('https://storage.netorare.codes/f/506766911.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+    }
+    .container {
+      text-align: center;
+      padding: 50px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+    h1 {
+      font-size: 50px;
+      color: #ff6347;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      animation: anime-title 2s infinite;
+    }
+    @keyframes anime-title {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    p {
+      font-size: 20px;
+      color: #fff;
+    }
+    .footer {
+      margin-top: 50px;
+      font-size: 16px;
+      color: #fff;
+    }
+    a {
+      color: #ff6347;
+      text-decoration: none;
+      transition: color 0.3s, transform 0.3s;
+    }
+    a:hover {
+      color: #ff4500;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Good Morning!</h1>
+    <p>Selamat datang di hari yang indah SayangKu!</p>
+    <p>Semoga Hari Mu Menyenangkan</p>
+    <div id="time" style="font-size: 24px; font-weight: bold;"></div>
+    <div class="footer">
+      <p>Coba Pencet!</p>
+      <a href="https://wa.me/6282338904398?text=Selamat%20Pagi%20Sayang">WhatsApp</a> 
+      </div>
+  </div>
+  <script>
+    window.onload = function() {
+      updateTime();
+    }
+    function updateTime() {
+      var e = document.getElementById('time');
+      var d = new Date();
+      var h = d.getHours();
+      var m = set(d.getMinutes());
+      var s = set(d.getSeconds());
+      e.innerHTML = h + ':' + m + ':' + s;
+      setTimeout(updateTime, 1000);
+    }
+    function set(e) {
+      e = e < 10 ? '0' + e : e;
+      return e;
+    }
+  </script>
+</body>
+</html>
